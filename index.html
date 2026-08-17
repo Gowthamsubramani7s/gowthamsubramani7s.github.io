@@ -247,6 +247,7 @@
       <p class="hero-desc">Recent M.S. graduate in Information Technology Management from the University of Wisconsin–Milwaukee (GPA 3.9), specializing in Data Analytics &amp; AI. I turn data into meaningful business insights using SQL, Power BI, Excel, Python, and Databricks.</p>
       <div class="hero-actions">
         <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="Gowtham_Subramani_Resume.pdf" download class="btn-primary" style="background:transparent;border:1px solid var(--accent);color:var(--accent);">Download Resume ⬇</a>
       </div>
     </div>
     <div class="profile-card">
@@ -514,27 +515,33 @@
           <div class="ci-icon">📍</div>
           <div><div class="ci-label">Location</div><div class="ci-value">St. Paul, Minnesota 55044</div></div>
         </a>
+        <a href="Gowtham_Subramani_Resume.pdf" download class="contact-item">
+          <div class="ci-icon">📄</div>
+          <div><div class="ci-label">Resume</div><div class="ci-value">Download PDF</div></div>
+        </a>
       </div>
     </div>
     <div class="contact-card">
       <h3>Send a Message</h3>
-      <div class="form-group">
-        <label>Your Name</label>
-        <input type="text" placeholder="Goso Tommy">
-      </div>
-      <div class="form-group">
-        <label>Email Address</label>
-        <input type="email" placeholder="Gosotommy@company.com">
-      </div>
-      <div class="form-group">
-        <label>Subject</label>
-        <input type="text" placeholder="Job Opportunity / Collaboration">
-      </div>
-      <div class="form-group">
-        <label>Message</label>
-        <textarea placeholder="Hi Gowtham, I'd like to connect about..."></textarea>
-      </div>
-      <button class="btn-submit" onclick="handleSubmit()">Send Message</button>
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="contactForm">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" name="name" placeholder="Your name" required>
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" name="email" placeholder="you@company.com" required>
+        </div>
+        <div class="form-group">
+          <label>Subject</label>
+          <input type="text" name="subject" placeholder="Job Opportunity / Collaboration">
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea name="message" placeholder="Hi Gowtham, I'd like to connect about..." required></textarea>
+        </div>
+        <button class="btn-submit" type="submit">Send Message</button>
+      </form>
     </div>
   </div>
 </section>
@@ -556,12 +563,6 @@
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.1 });
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-  function handleSubmit() {
-    const btn = document.querySelector('.btn-submit');
-    btn.textContent = 'Message Sent ✓';
-    btn.style.background = '#22c55e';
-    setTimeout(() => { btn.textContent = 'Send Message'; btn.style.background = ''; }, 3000);
-  }
 </script>
 </body>
 </html>
